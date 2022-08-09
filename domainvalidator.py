@@ -45,7 +45,7 @@ class DomainValidator():
 
 
 parser = argparse.ArgumentParser(description='Parse args')
-parser.add_argument('--env',     '-e', dest='env',      action='store', help='Environment')
+parser.add_argument('--env',     '-e', dest='env',      action='store', help='Environment File')
 parser.add_argument('--verbose', '-v', dest='verbose',  action='store_true', help='Verbose', default=False)
 
 obj = DomainValidator(parser.parse_args())

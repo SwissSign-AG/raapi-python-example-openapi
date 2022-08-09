@@ -187,7 +187,7 @@ class CertIssuer():
 
 parser = argparse.ArgumentParser(description='Parse args')
 parser.add_argument('--profile', '-p', dest='profile',  action='store', help='Profile to use')
-parser.add_argument('--env',     '-e', dest='env',      action='store', help='Environment')
+parser.add_argument('--env',     '-e', dest='env',      action='store', help='Environment File')
 parser.add_argument('--csr',     '-c', dest='csr',      action='store', help='CSR File')
 parser.add_argument('--key',     '-k', dest='key',      action='store', help='Key File')
 parser.add_argument('--verbose', '-v', dest='verbose',  action='store_true', help='Verbose', default=False)

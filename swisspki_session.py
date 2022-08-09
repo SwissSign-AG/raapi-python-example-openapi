@@ -9,19 +9,7 @@ from swisssign_ra_api.v2.api import api_registration_api
 from swisssign_ra_api.v2.model.client import Client
 
 class RaApiSession():
-    def __init__(self, environment='stage'):
-
-        if environment == 'preprod':
-            config_file = "./account.preprod.yml"
-
-        elif environment == 'libc':
-            config_file = "./account.libc.yml"
-
-        elif environment == 'prod':
-            config_file = "./account.prod.yml"
-
-        else:
-            config_file = "./account.stage.yml"
+    def __init__(self, config_file='./account.stage.yml'):
 
         with open(config_file,encoding='utf-8') as y:
             config = yaml.load(y, Loader=yaml.FullLoader)

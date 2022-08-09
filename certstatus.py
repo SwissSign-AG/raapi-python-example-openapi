@@ -64,10 +64,10 @@ class CertStatus():
 
 parser = argparse.ArgumentParser(description='Get certificate details')
 group = parser.add_mutually_exclusive_group(required=True)
-group.add_argument('--serial',   '-S', dest='serial', action='store', help='Cert Serial', default=None)
-group.add_argument('--cn',       '-c', dest='cn',     action='store', help='Cert cn',     default=None)
-group.add_argument('--file',     '-f', dest='file',   action='store', help='Read cert to investigate from file', default=None)
+group.add_argument('--serial',   '-S', dest='serial', action='store', help='Cert Serial')
+group.add_argument('--cn',       '-c', dest='cn',     action='store', help='Cert cn')
+group.add_argument('--file',     '-f', dest='file',   action='store', help='Read cert to investigate from file')
 parser.add_argument('--revoke',  '-r', dest='revoke', action='store_true', help='Revoke found certificates', default=False)
-parser.add_argument('--env',     '-e', dest='env',    action='store', help='Environment', default=None)
+parser.add_argument('--env',     '-e', dest='env',    action='store', help='Environment File')
 
 swisspki = CertStatus(parser.parse_args())
