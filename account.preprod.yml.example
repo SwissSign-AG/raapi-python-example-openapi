@@ -1,0 +1,135 @@
+---
+client: MPKI0000001 - Muster AG
+serviceaccount: MPKI0000001.AutoRAO
+secret: uzikxychuhziuuiu....
+baseurl: https://api.ra.pre.swisssign.ch
+domains:
+  - example.com
+  - example2.com
+
+certificates:
+  dv_ssl_singledomain:
+    product: "Muster DV SSL Silver Single-Domain"
+    subject:
+     - CN: "test.example.com"
+    san:
+     - DNS: "test.example.com"
+
+  dv_ssl_wildcard:
+    product: "Muster DV SSL Silver Wildcard"
+    subject:
+     - CN: "*.test.example.com"
+    san:
+     - DNS: "*.test.example.com"
+
+  ev_ssl_multidomain:
+    product: "Muster EV SSL Gold  Multi-Domain"
+    subject:
+     - CN: "test.example.com"
+     - O: "Muster AG"
+     - street: "Somestreet 42"
+     - jurisdictionC: "CH"
+     - jurisdictionST: 'ZH'
+     - businessCategory: "Private Organization"
+     - C: "CH"
+     - ST: 'ZH'
+     - L: "Somecity"
+     - postalCode: "8152"
+     - serialNumber: "CHE-109.357.012"
+    san:
+     - DNS: "test.example.com"
+     - DNS: "test2.example.com"
+
+  ev_ssl_singledomain:
+    product: "Muster EV SSL Gold  Multi-Domain"
+    subject:
+     - CN: "test.example.com"
+     - O: "Muster AG"
+     - street: "Somestreet 42"
+     - jurisdictionC: "CH"
+     - jurisdictionST: 'ZH'
+     - businessCategory: "Private Organization"
+     - C: "CH"
+     - ST: 'ZH'
+     - L: "Somecity"
+     - postalCode: "8152"
+     - serialNumber: "CHE-109.357.012"
+    san:
+     - DNS: "test.example.com"
+
+  ov_ssl_multidomain:
+    product: "Muster OV SSL Gold Multi-Domain"
+    subject:
+     - CN: "test.example.com"
+     - O: "Muster AG"
+     - street: "Somestreet 42"
+     - C: "CH"
+     - ST: 'ZH'
+     - L: "Somecity"
+     - postalCode: "8152"
+    san:
+     - DNS: "test.example.com"
+     - DNS: "test2.example.com"
+
+  ov_ssl_singledomain:
+    product: "Muster OV SSL Gold Single-Domain"
+    subject:
+     - CN: "test.example.com"
+     - O: "Muster AG"
+     - street: "Somestreet 42"
+     - C: "CH"
+     - ST: 'ZH'
+     - L: "Somecity"
+     - postalCode: "8152"
+    san:
+     - DNS: "test.example.com"
+
+  ov_ssl_wildcard:
+    product: "Muster OV SSL Gold Single-Domain"
+    subject:
+     - CN: "*.test.example.com"
+     - O: "Muster AG"
+     - street: "Somestreet 42"
+     - C: "CH"
+     - ST: 'ZH'
+     - L: "Somecity"
+     - postalCode: "1234"
+    san:
+     - DNS: "*.test.example.com"
+
+  smime_silver:
+    product: "Muster Personal S/MIME E-Mail ID Silver"
+    subject:
+     - CN: "some.user@example.com"
+    san:
+     - email: some.user@example.com
+
+  smime_gold:
+    product: "Muster Pro S/MIME E-Mail ID Gold"
+    subject:
+     - CN: "Some User"
+     - emailAddress: "some.user@example.com"
+     - C: "CH"
+    san:
+     - email: some.user@example.com
+
+  smime_gold_rsassa_pss:
+    product: "Muster Pro S/MIME E-Mail ID Gold RSASSA-PSS"
+    subject:
+     - CN: "Some User"
+     - emailAddress: "some.user@example.com"
+     - C: "CH"
+    san:
+     - email: some.user@example.com
+
+  smime_gold_auth:
+    product: "Muster Pro S/MIME E-Mail ID Gold with Auth"
+    subject:
+     - CN: "Some User"
+     - emailAddress: "some.user@example.com"
+     - C: "CH"
+    san:
+     - email: some.user@example.com
+
+
+
